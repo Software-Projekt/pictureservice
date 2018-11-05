@@ -11,11 +11,17 @@ public class PictureService {
 	
 	public static Map<Long, Event> events = DatabaseClass.getEvents();
 	
-//	public PictureService(){
-//		pictures.put(1L, new Picture(1, "Bild1", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
-//		pictures.put(2L, new Picture(2, "Bild2", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
-//
-//	}
+	public PictureService(){
+		addPicture(1L, new Picture(1, "Bild1", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+		addPicture(1L, new Picture(2, "Bild2", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+		addPicture(1L, new Picture(3, "Bild3", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+		addPicture(1L, new Picture(4, "Bild4", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+		addPicture(1L, new Picture(5, "Bild5", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+		addPicture(1L, new Picture(6, "Bild6", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+		addPicture(1L, new Picture(7, "Bild7", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+		addPicture(1L, new Picture(8, "Bild8", "https://i.ytimg.com/vi/jL083wMBMlM/maxresdefault.jpg"));
+
+	}
 
 	public List<Picture> getAllPictures(long eventId){
 		Map<Long, Picture> pictures = events.get(eventId).getPictures();
