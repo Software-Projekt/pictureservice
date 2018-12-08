@@ -2,11 +2,24 @@ package org.sp.pictureservice.model;
 
 import java.util.Date;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+@Entity
+@Access(AccessType.FIELD)
+@Table(name="picture")
 public class Picture {
-
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="picture_id")
+	@SequenceGenerator(name="picture_id", sequenceName="seq_picture_id", allocationSize = 1)
 	private long id;
 	private long eventId;
 	private String title;
