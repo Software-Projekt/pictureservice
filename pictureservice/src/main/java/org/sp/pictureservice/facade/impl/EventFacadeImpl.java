@@ -8,7 +8,7 @@ import org.sp.pictureservice.model.Event;
 
 public class EventFacadeImpl implements IEventFacade {
 	@EJB
-	private EventDAO eventDAO;
+	private EventDAO eventDAO = new EventDAO();
 	
 	/* (non-Javadoc)
 	 * @see org.sp.pictureservice.facade.impl.IEventFacade#saveEvent(org.sp.pictureservice.model.Event)

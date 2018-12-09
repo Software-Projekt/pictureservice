@@ -25,16 +25,23 @@ public class Event {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="event_id")
 	@SequenceGenerator(name="event_id", sequenceName="seq_event_id", allocationSize = 1)
 	private long id;
-	private String title;
-	private Date date;
+	private String name;
+	private String grusswort;
+	private boolean fuerGastFreigegeben;
+	private Date archivierungsDatum;
+	private Date erstellungsDatum;
 	private Map<Long, Picture> pictures = new HashMap<>();
 	
 	public Event(){}
-	
-	public Event (String title, Date date){
+
+	public Event(long id, String name, String grusswort, boolean fuerGastFreigegeben, Date archivierungsDatum,
+			Date erstellungsDatum) {
 		this.id = id;
-		this.title = title;
-		this.date = date;
+		this.name = name;
+		this.grusswort = grusswort;
+		this.fuerGastFreigegeben = fuerGastFreigegeben;
+		this.archivierungsDatum = archivierungsDatum;
+		this.erstellungsDatum = erstellungsDatum;
 	}
 
 	public long getId() {
@@ -45,20 +52,44 @@ public class Event {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public Date getDate() {
-		return date;
+	public String getGrusswort() {
+		return grusswort;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setGrusswort(String grusswort) {
+		this.grusswort = grusswort;
+	}
+
+	public boolean isFuerGastFreigegeben() {
+		return fuerGastFreigegeben;
+	}
+
+	public void setFuerGastFreigegeben(boolean fuerGastFreigegeben) {
+		this.fuerGastFreigegeben = fuerGastFreigegeben;
+	}
+
+	public Date getArchivierungsDatum() {
+		return archivierungsDatum;
+	}
+
+	public void setArchivierungsDatum(Date archivierungsDatum) {
+		this.archivierungsDatum = archivierungsDatum;
+	}
+
+	public Date getErstellungsDatum() {
+		return erstellungsDatum;
+	}
+
+	public void setErstellungsDatum(Date erstellungsDatum) {
+		this.erstellungsDatum = erstellungsDatum;
 	}
 
 	@XmlTransient
