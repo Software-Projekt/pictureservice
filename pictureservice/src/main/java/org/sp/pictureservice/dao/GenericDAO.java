@@ -22,7 +22,7 @@ import javax.persistence.metamodel.Metamodel;
 
 public abstract class GenericDAO<T> {
 
-	private final String UNIT_NAME = "EJB_JPA_website_G1";
+	private final String UNIT_NAME = "website_pictureservice";
 	
 	@PersistenceContext(unitName=UNIT_NAME)
 	private EntityManager em = new EntityManager() {
