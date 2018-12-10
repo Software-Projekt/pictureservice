@@ -5,7 +5,7 @@
 
     <groupId>org.sp</groupId>
     <artifactId>pictureservice</artifactId>
-    <packaging>war</packaging>
+    <packaging>ejb</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>pictureservice</name>
 

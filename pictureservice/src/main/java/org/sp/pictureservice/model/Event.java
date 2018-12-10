@@ -34,9 +34,8 @@ public class Event {
 	
 	public Event(){}
 
-	public Event(long id, String name, String grusswort, boolean fuerGastFreigegeben, Date archivierungsDatum,
+	public Event(String name, String grusswort, boolean fuerGastFreigegeben, Date archivierungsDatum,
 			Date erstellungsDatum) {
-		this.id = id;
 		this.name = name;
 		this.grusswort = grusswort;
 		this.fuerGastFreigegeben = fuerGastFreigegeben;

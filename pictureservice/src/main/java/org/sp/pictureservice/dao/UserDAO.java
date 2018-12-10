@@ -5,7 +5,7 @@ import java.util.Map;
 
 import javax.ejb.Stateless;
 
-import org.sp.pictureservice.model.User;
+import org.sp.pictureservice.model.user.User;
 
 @Stateless
 public class UserDAO extends GenericDAO<User> {

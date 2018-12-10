@@ -1,4 +1,4 @@
-package org.sp.pictureservice.model;
+package org.sp.pictureservice.model.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,15 +19,30 @@ public class User {
 	public static final String FIND_BY_USERNAME = "User.findUserByUsername";
 	
 	@Id
-	@Column(length=80)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="user_id")
 	@SequenceGenerator(name="user_id", sequenceName="seq_user_id", allocationSize = 1)
+	private Long id;
+	
+	@Column(length=80)
 	private String username;
 	private String password;
-
+	private String rolle;
+	private String sessionID;
 
 	public User(){}
 
+	public boolean logout() {
+		
+	}
+	
+	public boolean login() {
+		
+	}
+	
+	public boolean clearSID() {
+		
+	}
+	
 	public String getPassword() {
 		return password;
 	}
